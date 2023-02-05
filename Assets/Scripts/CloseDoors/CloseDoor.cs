@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CloseDoor : MonoBehaviour
+public class CloseDoor : GenericStep
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void CustomStart()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CloseDoors()
     {
-        
+        EventManager.stepCompleteInvoke();
     }
+
 }
  

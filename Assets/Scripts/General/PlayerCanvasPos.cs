@@ -27,6 +27,14 @@ public class PlayerCanvasPos : MonoBehaviour
         canvas.transform.rotation = Quaternion.Euler(0, 15.3f, 0);
     }
 
+    public void BackSide()
+    {
+        player.transform.position = new Vector3(-1.151f, -3.9f, -1.52f);
+        player.transform.rotation = Quaternion.Euler(0, 90, 0);
+        canvas.transform.position = new Vector3(-0.845f, -2.344f, -0.358f);
+        canvas.transform.rotation = Quaternion.Euler(0, 15.3f, 0);
+    }
+
     public void FrontSide()
     {
         player.transform.position = new Vector3(-0.031f, -3.9f, 0.2f);
