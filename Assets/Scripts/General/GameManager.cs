@@ -76,9 +76,9 @@ public class GameManager : MonoBehaviour
 
     void LoadUI()
     {
-        //titleText.text = steps[currentStepIndex].content.title; 
-        //descriptionText.text = steps[currentStepIndex].content.description; 
-        //refImage.sprite = steps[currentStepIndex].content.refImage; 
-        //videoPlay.clip = steps[currentStepIndex].content.videoClip; 
+        titleText.text = steps[currentStepIndex].content.title;
+        descriptionText.text = steps[currentStepIndex].content.description;
+        refImage.sprite = steps[currentStepIndex].content.refImage;
+        videoPlay.clip = steps[currentStepIndex].content.videoClip;
     }
 }

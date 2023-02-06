@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39998559bfb401479dcd3726c981870, type: 3}
+  m_Name: SmartPadSwitchOn
+  m_EditorClassIdentifier: 
+  title: Switch On
+  description: Activate the SmartPad by pressing the power button. This will allow
+    you to use the buttons on the SmartPad.
+  refImage: {fileID: 21300000, guid: c006873187f4f364480434aded31762a, type: 3}
+  videoClip: {fileID: 32900000, guid: cadbdd6add17da343b226a57b4f4fc82, type: 3}

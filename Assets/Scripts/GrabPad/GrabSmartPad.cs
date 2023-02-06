@@ -12,6 +12,6 @@ public class GrabSmartPad : GenericStep
 
     public void SmartPadPicked()
     {
-        EventManager.stepCompleteInvoke();
+        //EventManager.stepCompleteInvoke();
     }
 }

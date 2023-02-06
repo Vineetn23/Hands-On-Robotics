@@ -6,25 +6,34 @@ using UnityEngine;
 public class PowerButtonRot : GenericStep
 {
     public GameObject powerButton;
-    bool rotCompleted = false;
+    public bool rotCompleted = false;
+
+    public AudioClip clip;
+    public AudioSource audSource;
+
     public override void CustomStart()
     {
         powerButton.GetComponent<Grabbable>().enabled= true;
+        audSource.clip = clip;
     }
 
     public override void CustomUpdate()
     {
         Quaternion currentRot = powerButton.transform.localRotation;
-        if (currentRot.eulerAngles.z == 150f && rotCompleted == false)
+        
+        if (currentRot.eulerAngles.y == 210f && rotCompleted == false)
         {
-            rotCompleted= true;
+            rotCompleted = true;
             RotDone();
         }
+        Debug.Log(currentRot.eulerAngles.y);
+        
     }
 
     public void RotDone()
     {
         EventManager.stepCompleteInvoke();
+        audSource.Play();
     }
 
     public override void CustomOnDisable()
