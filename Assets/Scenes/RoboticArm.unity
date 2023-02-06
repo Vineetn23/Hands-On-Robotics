@@ -784,7 +784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 72229262}
   m_Layer: 0
-  m_Name: SmartPadSwitch
+  m_Name: SmartPadSwitchOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11652,6 +11652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1152886238}
+  - component: {fileID: 1152886239}
   m_Layer: 0
   m_Name: GrabSmartPad
   m_TagString: Untagged
@@ -11674,6 +11675,21 @@ Transform:
   m_Father: {fileID: 1844858578}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1152886239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152886237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95051888238e7cf46acb7e39173e2485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalSubSteps: 1
+  content: {fileID: 0}
+  smartPad: {fileID: 1500770517}
 --- !u!1 &1189734537
 GameObject:
   m_ObjectHideFlags: 0
@@ -15281,6 +15297,7 @@ GameObject:
   - component: {fileID: 1500770519}
   - component: {fileID: 1500770523}
   - component: {fileID: 1500770521}
+  - component: {fileID: 1500770524}
   m_Layer: 0
   m_Name: SmartPadPivot
   m_TagString: Untagged
@@ -15315,7 +15332,7 @@ BoxCollider:
   m_GameObject: {fileID: 1500770517}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.26444843, y: 0.032880306, z: 0.17405069}
   m_Center: {x: -0.017775789, y: 0.00062036514, z: 0.0110164285}
@@ -15368,6 +15385,33 @@ MonoBehaviour:
   _oneGrabTransformer: {fileID: 0}
   _twoGrabTransformer: {fileID: 0}
   _maxGrabPoints: -1
+--- !u!114 &1500770524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500770517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42fe407cb2d4fb949b430e195a84404b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smartPadGrabbed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1152886239}
+        m_TargetAssemblyTypeName: GrabSmartPad, Assembly-CSharp
+        m_MethodName: SmartPadPicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1504481173
 GameObject:
   m_ObjectHideFlags: 0
@@ -18000,6 +18044,7 @@ MonoBehaviour:
   - {fileID: 364851493}
   - {fileID: 2080653364}
   - {fileID: 1342918598}
+  - {fileID: 1152886239}
   - {fileID: 364851493}
   - {fileID: 364851493}
   currentStepIndex: 0
