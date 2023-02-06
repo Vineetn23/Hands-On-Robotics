@@ -6,6 +6,7 @@ using UnityEngine;
 public class PowerButtonPush : GenericStep
 {
     public GameObject powerButton;
+    public bool firstTime = true;
     public override void CustomStart()
     {
         powerButton.GetComponent<PokeInteractable>().enabled= true;
@@ -14,7 +15,11 @@ public class PowerButtonPush : GenericStep
 
     public void PowerButtonPushed()
     {
-        EventManager.stepCompleteInvoke();
+        if (firstTime)
+        {
+            EventManager.stepCompleteInvoke();
+            firstTime = false;
+        }
     }
 
     public override void CustomOnDisable()

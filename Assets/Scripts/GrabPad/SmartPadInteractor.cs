@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class SmartPadInteractor : MonoBehaviour
 {
     public UnityEvent smartPadGrabbed;
-    bool firstTime = true;
+    public bool firstTime = true;
     private void OnTriggerEnter(Collider other)
     {
         if (firstTime)

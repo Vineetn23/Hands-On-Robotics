@@ -6,6 +6,7 @@ using UnityEngine;
 public class SmartPadSwitchOn : GenericStep
 {
     public GameObject smartPadSwitch;
+    public bool firstTime = true;
     public override void CustomStart()
     {
         smartPadSwitch.GetComponent<PokeInteractable>().enabled= true;
@@ -14,7 +15,11 @@ public class SmartPadSwitchOn : GenericStep
 
     public void ButtonPushed()
     {
-        EventManager.stepCompleteInvoke();
+        if (firstTime)
+        {
+            EventManager.stepCompleteInvoke();
+            firstTime= false;
+        }
     }
 
     public override void CustomOnDisable()
