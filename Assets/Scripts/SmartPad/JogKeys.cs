@@ -12,34 +12,30 @@ public class JogKeys : GenericStep
     public GameObject A2;
     public GameObject A3;
     public GameObject A4;
-    public GameObject A5;
-    public GameObject A6;
+    public GameObject A51;
+    public GameObject A52;
 
     bool a1Neg = false;
     bool a2Neg = false;
     bool a3Neg = false;
     bool a4Neg = false;
     bool a5Neg = false;
-    bool a6Neg = false;
     bool a1Pos = false;
     bool a2Pos = false;
     bool a3Pos = false;
     bool a4Pos = false;
     bool a5Pos = false;
-    bool a6Pos = false;
 
     public GameObject A1PosButton;
     public GameObject A2PosButton;
     public GameObject A3PosButton;
     public GameObject A4PosButton;
     public GameObject A5PosButton;
-    public GameObject A6PosButton;
     public GameObject A1NegButton;
     public GameObject A2NegButton;
     public GameObject A3NegButton;
     public GameObject A4NegButton;
     public GameObject A5NegButton;
-    public GameObject A6NegButton;
 
     public AudioSource audioSource;
     public AudioClip robotClip;
@@ -51,13 +47,11 @@ public class JogKeys : GenericStep
         A3PosButton.GetComponent<PokeInteractable>().enabled = true;
         A4PosButton.GetComponent<PokeInteractable>().enabled = true;
         A5PosButton.GetComponent<PokeInteractable>().enabled = true;
-        A6PosButton.GetComponent<PokeInteractable>().enabled = true;
         A1NegButton.GetComponent<PokeInteractable>().enabled = true;
         A2NegButton.GetComponent<PokeInteractable>().enabled = true;
         A3NegButton.GetComponent<PokeInteractable>().enabled = true;
         A4NegButton.GetComponent<PokeInteractable>().enabled = true;
         A5NegButton.GetComponent<PokeInteractable>().enabled = true;
-        A6NegButton.GetComponent<PokeInteractable>().enabled = true;
     }
 
     public override void CustomUpdate()
@@ -71,85 +65,72 @@ public class JogKeys : GenericStep
         {
             A1.transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
             Vector3 eulerAngles = A1.transform.localEulerAngles;
-            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -170, 170);
+            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -60, 60);
             A1.transform.localEulerAngles = eulerAngles;
         }
         if (a2Pos)
         {
             A2.transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
             Vector3 eulerAngles = A2.transform.localEulerAngles;
-            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -70, 14);
+            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -10, 20);
             A2.transform.localEulerAngles = eulerAngles;
         }
         if (a3Pos)
         {
             A3.transform.Rotate(-Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
             Vector3 eulerAngles = A3.transform.localEulerAngles;
-            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -45, 75);
+            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), 0, 75);
             A3.transform.localEulerAngles = eulerAngles;
         }
         if (a4Pos)
         {
             A4.transform.Rotate(-Vector3.left * rotationSpeed * Time.deltaTime, Space.Self);
             Vector3 eulerAngles = A4.transform.localEulerAngles;
-            eulerAngles.x = Mathf.Clamp((eulerAngles.x <= 180) ? eulerAngles.x : -(360 - eulerAngles.x), -180, 0);
+            eulerAngles.x = Mathf.Clamp((eulerAngles.x <= 180) ? eulerAngles.x : -(360 - eulerAngles.x), 0, 90);
             A4.transform.localEulerAngles = eulerAngles;
         }
         if (a5Pos)
         {
-            A5.transform.Rotate(-Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
-            Vector3 eulerAngles = A5.transform.localEulerAngles;
-            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -90, 90);
-            A5.transform.localEulerAngles = eulerAngles;
+            A51.transform.Rotate(-Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
+            Vector3 eulerAngles = A51.transform.localEulerAngles;
+            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), 0, 50);
+            A51.transform.localEulerAngles = eulerAngles;
         }
-        if (a6Pos)
-        {
-            A6.transform.Rotate(-Vector3.left * rotationSpeed * Time.deltaTime, Space.Self);
-            Vector3 eulerAngles = A6.transform.localEulerAngles;
-            eulerAngles.x = Mathf.Clamp((eulerAngles.x <= 180) ? eulerAngles.x : -(360 - eulerAngles.x), -180, 0);
-            A6.transform.localEulerAngles = eulerAngles;
-        }
+
         if (a1Neg)
         {
             A1.transform.Rotate(-Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
             Vector3 eulerAngles = A1.transform.localEulerAngles;
-            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -170, 170);
+            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -60, 60);
             A1.transform.localEulerAngles = eulerAngles;
         }
         if (a2Neg)
         {
             A2.transform.Rotate(-Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
             Vector3 eulerAngles = A2.transform.localEulerAngles;
-            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -70, 14);
+            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -10, 20);
             A2.transform.localEulerAngles = eulerAngles;
         }
         if (a3Neg)
         {
             A3.transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
             Vector3 eulerAngles = A3.transform.localEulerAngles;
-            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -45, 75);
+            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), 0, 75);
             A3.transform.localEulerAngles = eulerAngles;
         }
         if (a4Neg)
         {
             A4.transform.Rotate(Vector3.left * rotationSpeed * Time.deltaTime, Space.Self);
             Vector3 eulerAngles = A4.transform.localEulerAngles;
-            eulerAngles.x = Mathf.Clamp((eulerAngles.x <= 180) ? eulerAngles.x : -(360 - eulerAngles.x), -180, 0);
+            eulerAngles.x = Mathf.Clamp((eulerAngles.x <= 180) ? eulerAngles.x : -(360 - eulerAngles.x), 0, 90);
             A4.transform.localEulerAngles = eulerAngles;
         }
         if (a5Neg)
         {
-            A5.transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
-            Vector3 eulerAngles = A5.transform.localEulerAngles;
-            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), -90, 90);
-            A5.transform.localEulerAngles = eulerAngles;
-        }
-        if (a6Neg)
-        {
-            A6.transform.Rotate(Vector3.left * rotationSpeed * Time.deltaTime, Space.Self);
-            Vector3 eulerAngles = A6.transform.localEulerAngles;
-            eulerAngles.x = Mathf.Clamp((eulerAngles.x <= 180) ? eulerAngles.x : -(360 - eulerAngles.x), -180, 0);
-            A6.transform.localEulerAngles = eulerAngles;
+            A51.transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
+            Vector3 eulerAngles = A51.transform.localEulerAngles;
+            eulerAngles.y = Mathf.Clamp((eulerAngles.y <= 180) ? eulerAngles.y : -(360 - eulerAngles.y), 0, 50);
+            A51.transform.localEulerAngles = eulerAngles;
         }
     }
 
@@ -214,18 +195,6 @@ public class JogKeys : GenericStep
 
     }
 
-    public void A6Negative()
-    {
-        a6Neg = true;
-
-    }
-
-    public void A6Positive()
-    {
-        a6Pos = true;
-
-    }
-
     public void SoundPlayRobot()
     {
         audioSource.clip = robotClip;
@@ -240,13 +209,11 @@ public class JogKeys : GenericStep
         a3Neg = false;
         a4Neg = false;
         a5Neg = false;
-        a6Neg = false;
         a1Pos = false;
         a2Pos = false;
         a3Pos = false;
         a4Pos = false;
         a5Pos = false;
-        a6Pos = false;
         audioSource.Stop();
     }
 }
