@@ -25,7 +25,7 @@ public class PowerButtonPush : GenericStep
 
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         powerButton.GetComponent<PokeInteractable>().enabled = false;
         powerButton.GetComponent<InteractableUnityEventWrapper>().enabled = false;
     }
