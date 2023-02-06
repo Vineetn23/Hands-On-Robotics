@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
-    //public Image refImage;
+    public Image refImage;
     public VideoPlayer videoPlay;
 
     public AudioSource audioSource;
@@ -76,9 +76,9 @@ public class GameManager : MonoBehaviour
 
     void LoadUI()
     {
-        titleText.text = steps[currentStepIndex].content.title; 
-        descriptionText.text = steps[currentStepIndex].content.description; 
+        //titleText.text = steps[currentStepIndex].content.title; 
+        //descriptionText.text = steps[currentStepIndex].content.description; 
         //refImage.sprite = steps[currentStepIndex].content.refImage; 
-        videoPlay.clip = steps[currentStepIndex].content.videoClip; 
+        //videoPlay.clip = steps[currentStepIndex].content.videoClip; 
     }
 }

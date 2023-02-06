@@ -14,7 +14,6 @@ public class DoorClosedInteractor : MonoBehaviour
     {
         if (other.gameObject.name == "FrontGlass")
         {
-            other.gameObject.GetComponent<BoxCollider>().enabled = false;
             other.gameObject.GetComponent<SphereCollider>().enabled = false;
             other.gameObject.GetComponent<Grabbable>().enabled = false;
             audioSource.clip = doorClip;
@@ -23,17 +22,15 @@ public class DoorClosedInteractor : MonoBehaviour
         }
         if (other.gameObject.name == "LeftGlass")
         {
-            other.gameObject.GetComponent<BoxCollider>().enabled = false;
             other.gameObject.GetComponent<SphereCollider>().enabled = false;
             other.gameObject.GetComponent<Grabbable>().enabled = false;
             audioSource.clip = doorClip;
             audioSource.Play();
             snapComplete?.Invoke();
-            playerCanvasPos.RightSide();
+            playerCanvasPos.BackSide();
         }
         if (other.gameObject.name == "RightGlass")
         {
-            other.gameObject.GetComponent<BoxCollider>().enabled = false;
             other.gameObject.GetComponent<SphereCollider>().enabled = false;
             other.gameObject.GetComponent<Grabbable>().enabled = false;
             audioSource.clip = doorClip;
@@ -44,13 +41,13 @@ public class DoorClosedInteractor : MonoBehaviour
 
         if (other.gameObject.name == "BackGlass")
         {
-            other.gameObject.GetComponent<BoxCollider>().enabled = false;
+           
             other.gameObject.GetComponent<SphereCollider>().enabled = false;
             other.gameObject.GetComponent<Grabbable>().enabled = false;
             audioSource.clip = doorClip;
             audioSource.Play();
             snapComplete?.Invoke();
-            playerCanvasPos.BackSide();
+            playerCanvasPos.RightSide();
         }
     }
 
