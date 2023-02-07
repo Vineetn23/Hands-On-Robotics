@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class DoorClosedInteractor : MonoBehaviour
 {
     public UnityEvent snapComplete;
-    public PlayerCanvasPos playerCanvasPos;
     public AudioSource audioSource;
     public AudioClip doorClip;
     private void OnTriggerEnter(Collider other)
@@ -27,7 +26,6 @@ public class DoorClosedInteractor : MonoBehaviour
             audioSource.clip = doorClip;
             audioSource.Play();
             snapComplete?.Invoke();
-            playerCanvasPos.BackSide();
         }
         if (other.gameObject.name == "RightGlass")
         {
@@ -36,7 +34,6 @@ public class DoorClosedInteractor : MonoBehaviour
             audioSource.clip = doorClip;
             audioSource.Play();
             snapComplete?.Invoke();
-            playerCanvasPos.FrontSide();
         }
 
         if (other.gameObject.name == "BackGlass")
@@ -47,7 +44,6 @@ public class DoorClosedInteractor : MonoBehaviour
             audioSource.clip = doorClip;
             audioSource.Play();
             snapComplete?.Invoke();
-            playerCanvasPos.RightSide();
         }
     }
 

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39998559bfb401479dcd3726c981870, type: 3}
+  m_Name: GrabCup
+  m_EditorClassIdentifier: 
+  title: Grab Cup
+  description: Examine your hands, then attempt to pick up the cup that is within
+    reach.
+  refImage: {fileID: 21300000, guid: 48358dd5405fc1f4a99adb45593de1c6, type: 3}
+  videoClip: {fileID: 32900000, guid: 1157f4ba9825079419332ae3e5437563, type: 3}

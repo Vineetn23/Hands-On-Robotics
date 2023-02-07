@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 6b24baad015b03549bda42b1867e27be
+  - enabled: 1
+    path: Assets/Scenes/RoboticArm.unity
+    guid: 9f505d60a59e28742b5eaee72ad8ed14
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b30cb0ffac9dca54c80edb9685dd1b4d, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a85e5fca2b6ac50408bedc734bd0bc77, type: 2}

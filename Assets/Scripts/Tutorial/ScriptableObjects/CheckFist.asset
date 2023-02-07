@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39998559bfb401479dcd3726c981870, type: 3}
+  m_Name: CheckFist
+  m_EditorClassIdentifier: 
+  title: Form Fist
+  description: Turn the palm of your left hand towards your face and form a fist.
+  refImage: {fileID: 21300000, guid: 30e055b74ce1e944f9f5ba1910b1915d, type: 3}
+  videoClip: {fileID: 32900000, guid: 504c3e726d3994b4f96313fa167bc72d, type: 3}

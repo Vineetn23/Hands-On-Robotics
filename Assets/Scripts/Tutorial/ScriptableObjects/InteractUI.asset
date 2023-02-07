@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39998559bfb401479dcd3726c981870, type: 3}
+  m_Name: InteractUI
+  m_EditorClassIdentifier: 
+  title: Interact with UI
+  description: Keep your left hand in a fist and use your right hand to press the
+    buttons on the interface.
+  refImage: {fileID: 21300000, guid: 6adf4482b34d5f04884018e043da826b, type: 3}
+  videoClip: {fileID: 32900000, guid: 43360b9d493d9684b96cd55c729ebfd7, type: 3}
