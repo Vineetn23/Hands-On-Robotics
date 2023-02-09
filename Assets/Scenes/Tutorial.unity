@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7177352670155844dbb1813e3517be70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalSubSteps: 4
+  totalSubSteps: 3
   content: {fileID: 11400000, guid: 196963b16e80ea84c95060f2f4097fa4, type: 2}
   cube: {fileID: 630657950}
   greenMat: {fileID: 2100000, guid: 457311c5615d0ce4d93f26d056012455, type: 2}
@@ -1196,7 +1196,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 268cd6d297a2fec49b038c27bcefcd5e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
