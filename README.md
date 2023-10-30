@@ -2,6 +2,8 @@
 
 **Welcome to the "Robotic Arm VR using Hand Tracking" project!** This immersive training experience is designed to help users understand the steps required before operating a robotic arm machine. Once you've completed the training steps, you'll have the exciting opportunity to control the robotic arm using hand tracking technology and hand gestures.
 
+https://drive.google.com/file/d/1jOLXHR8L2t8kDccqoHPQA-XSQpw3MkLZ/view?usp=sharing
+
 ## Project Overview
 
 ### Features:
