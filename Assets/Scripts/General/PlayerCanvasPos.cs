@@ -7,7 +7,7 @@ public class PlayerCanvasPos : MonoBehaviour
     public GameObject player;
     void Start()
     {
-        LeftSide();
+        FrontSide();
     }
 
     public void LeftSide()
